@@ -125,13 +125,6 @@ app.post('/login', async (req, res)=>{
     })
 })
 
-// connecting server through port == 8000 -> line 4
-app.listen(port, ()=> {
-    console.log("port 8000 server is connected!")
-})
-
-
-
 /*
 app.post('/login', async (req, res)=>{
     // try to find if email already exist in db
@@ -159,7 +152,10 @@ app.post('/login', async (req, res)=>{
         } )
     })
 })
-
-
-
 */
+
+
+// connecting server through port == 8000 -> line 4
+app.listen(port, ()=> {
+    console.log("port 8000 server is connected!")
+})
