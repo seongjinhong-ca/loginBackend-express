@@ -9,6 +9,8 @@ const {User} = require("./models/User");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
+const {auth} = require("./middleware/auth");
+
 // http header content type: https://it-eldorado.tistory.com/143#:~:text=%EB%A8%BC%EC%A0%80%2C%20URL%20%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%B4%EB%9E%80%20URL,%EB%8A%94%2016%EC%A7%84%EC%88%98%20%EA%B0%92%EC%9D%B4%EB%8B%A4.
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended:true}));
@@ -153,6 +155,21 @@ app.post('/login', async (req, res)=>{
     })
 })
 */
+
+app.get('/api/users/auth', auth, (req, res)=>{
+    res.status(200).json({
+        _id:req.user._id,
+        isAdmin: req.user.role === 0? false:true,
+        isAuth:true,
+        email:req.user.email,
+        name:req.user.name,
+        lastname:req.user.lastname,
+        role:req.user.role,
+        image:req.user.image
+    })
+})
+
+//logout
 
 
 // connecting server through port == 8000 -> line 4
