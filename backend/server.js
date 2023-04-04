@@ -7,12 +7,14 @@ const port = 8000;
 // import User from "./models/user"
 const {User} = require("./models/User");
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 // http header content type: https://it-eldorado.tistory.com/143#:~:text=%EB%A8%BC%EC%A0%80%2C%20URL%20%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%B4%EB%9E%80%20URL,%EB%8A%94%2016%EC%A7%84%EC%88%98%20%EA%B0%92%EC%9D%B4%EB%8B%A4.
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended:true}));
 //application/json
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 // parser is the function
 /*
@@ -98,7 +100,66 @@ app.post("/register", async (req, res)=> {
 
 })
 
+app.post('/login', async (req, res)=>{
+    // try to find if email already exist in db
+    const user = await User.findOne({ email:req.body.email })
+    if(!user){
+        return res.json({
+            loginSuccess:false,
+            message:"제공된 이메일에 해당하는 유저가 없습니다"
+        })
+    }
+    // 요청된 이메일이 데이터베이스에 있다면 비밀번호가 맞는 비밀번호인지 확인.
+    user.comparePassword(req.body.password, (err, isMatch) => {
+        if(!isMatch){
+            return  res.json({loginSuccess:false, message:"비밀번호가 틀렸습니다"})
+        }
+        // 비밀번호까지 맞다면 토큰을 생성하기
+        user.generateToken((err, user)=>{
+            if(err) return res.status(400).send(err);
+            // 토큰을 저장한다. 어디에? 쿠키, 로컬 스토리지
+            res.cookie("x_auth", user.token)
+            .status(200)
+            .json({loginSuccess:true, userId:user._id})
+        })
+    })
+})
+
 // connecting server through port == 8000 -> line 4
 app.listen(port, ()=> {
     console.log("port 8000 server is connected!")
 })
+
+
+
+/*
+app.post('/login', async (req, res)=>{
+    // try to find if email already exist in db
+    await User.findOne({ email:req.body.email }, (err, user)=>{
+        // user not exist
+        if(!user){
+            return res.json({
+                loginSuccess:false,
+                message:"제공된 이메일에 해당하는 유저가 없습니다"
+            })
+        }
+        // 요청된 이메일이 데이터베이스에 있다면 비밀번호가 맞는 비밀번호인지 확인.
+        user.comparePassword(req.body.password, (err, isMatch) => {
+            if(!isMatch){
+                return  res.json({loginSuccess:false, message:"비밀번호가 틀렸습니다"})
+            }
+            // 비밀번호까지 맞다면 토큰을 생성하기
+            user.generateToken((err, user)=>{
+                if(err) return res.status(400).send(err);
+                // 토큰을 저장한다. 어디에? 쿠키, 로컬 스토리지
+                res.cookie("x_auth", user.token)
+                .status(200)
+                .json({loginSuccess:true, userId:user._id})
+            })
+        } )
+    })
+})
+
+
+
+*/
