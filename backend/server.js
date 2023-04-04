@@ -170,7 +170,24 @@ app.get('/api/users/auth', auth, (req, res)=>{
 })
 
 //logout
-
+app.get('/api/users/logout', auth, (req, res) => {
+    User.findOneAndUpdate({_id:req.user._id},
+        {token:""})
+        .then((user)=>{
+            res.status(200).send({
+                success:true
+            })
+        })
+        .catch((err)=> {
+            return res.json({success:false, err})
+        })
+        // (err, user)=>{
+        //     if(err) return res.json({success:false, err});
+        //     return res.status(200).send({
+        //         success:true
+        //     })
+        // }
+})
 
 // connecting server through port == 8000 -> line 4
 app.listen(port, ()=> {
