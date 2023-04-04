@@ -1,6 +1,6 @@
-# The document is about the problems/errors I faced during my login backend implementation and how I overcome these issues.
+# This document is about the problems/errors I have faced during my login backend implementation and how I overcome these issues.
 
-# 1 Recently, some of the mongoose methods I has changed the syntax. Most methods are not accepting the callback function as a parameter.
+Recently, some of the mongoose methods changed its syntax. Most of the methods are not accepting the callback function as a parameter.
 
 error:
 
@@ -17,14 +17,14 @@ MongooseError: Model.findOneAndUpdate() no longer accepts a callback
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 ```
 
-Mongoose is the tool that make sever to save, search, create, updates the MongoDB once the Database address is connected with the server.
+`Mongoose` is the tool that make sever to save, search, create, updates the MongoDB once the database address(== URI) is connected with the server.
 
-I have created the User model for making a blue print and for the purpose of storing user information using mongoose. so whenever, I call the model user, it can use the mongoose methods.
+I have created the `User` `model` for making a `blue print` and for the purpose of storing user information using mongoose. so whenever, I call the model user, it can use the mongoose methods.
 
 In the past, `Model.findOneAndUpdate()` can pass in the callback function as a last parameter. However, now, callback is not allowed.
 
-problem: callback cannot be used when I'm using mongoose methods.
-solution: instead of implementing in callback style, I choose either async/await pattern or use Promise.
+- problem: callback cannot be used when I'm using mongoose methods.
+- solution: instead of implementing in callback style, I choose either async/await pattern or use Promise.
 
 using Promise:
 
