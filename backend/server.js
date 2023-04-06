@@ -2,8 +2,6 @@
 const express = require("express");
 // create a server call "app" by running express object
 const app = express()
-// set the port
-const port = 8000;
 // import User from "./models/user"
 const {User} = require("./models/User");
 const bodyParser = require('body-parser');
@@ -189,6 +187,8 @@ app.get('/api/users/logout', auth, (req, res) => {
         // }
 })
 
+// set the port
+const port = 8000;
 // connecting server through port == 8000 -> line 4
 app.listen(port, ()=> {
     console.log("port 8000 server is connected!")
