@@ -52,10 +52,15 @@ mongoose.connect(config.mongoURI, {
 }).then(()=> console.log('MongoDB connected...'))
 .catch(err => console.log(err))
 
+app.use(cors())
+
 // end point
 app.get("/", (req, res) => res.send("Hello world!~안녕하세요."))
 
-app.post("/register", async (req, res)=> {
+app.get('/api/hello', (req, res)=>{
+    res.send("안녕하세요")
+})
+app.post("/api/users/register", async (req, res)=> {
     // get the schema of user model
     const user = new User(req.body);
     // saving user takes asynchronous amount of time
@@ -100,7 +105,7 @@ app.post("/register", async (req, res)=> {
 
 })
 
-app.post('/login', async (req, res)=>{
+app.post('/api/users/login', async (req, res)=>{
     // try to find if email already exist in db
     const user = await User.findOne({ email:req.body.email })
     if(!user){
