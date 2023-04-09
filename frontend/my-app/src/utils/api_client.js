@@ -1,6 +1,6 @@
-import {axios} from "axios";
+import axios from "axios";
 
-let instance;
+let instance = null;
 
 export const getInstance = () => {
     if(!instance){
