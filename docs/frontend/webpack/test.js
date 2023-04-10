@@ -1,0 +1,1 @@
+console.log(__dirname); // 현재나의 위치 \mern_express_mongoose_mongo\docs\frontend\webpack
