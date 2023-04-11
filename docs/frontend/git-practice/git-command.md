@@ -47,3 +47,15 @@ moving file from one location to another:
  $ ls
 environmentVarible_setUp.md
 ```
+
+making a directory:
+
+```sh
+mkdir docs # creating docs directory
+```
+
+making a file:
+
+```sh
+touch file1.js # creating a file called file1.js
+```
