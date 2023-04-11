@@ -66,3 +66,14 @@ react 공식 문서 새 버전
 https://react-ko.vercel.app/learn/state-a-components-memory
 외국판: 완성
 https://react.dev/reference/react/useEffect#my-effect-runs-twice-when-the-component-mounts
+
+job:
+https://www.judge.com/jobs/details/960622/?utm_source=linkedin
+https://career8.successfactors.com/career?company=CADeloitte&loginFlowRequired=true&lang=en_US&_s.crb=VXHLfSnckjtFAEhi8W6XzL4akJMFPfwRye0qW%2bzWkv0%3d
+https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12895/apply/section/3/?utm_medium=jobshare
+https://boards.greenhouse.io/nightfall/jobs/4008686006?gh_src=fd9e1fbb6us
+https://www.utsc.utoronto.ca/hr/join-our-team
+https://ca.indeed.com/jobs?q=react&l=Toronto%2C+ON&vjk=bccc4a6ac1a2be05
+https://jobs.lever.co/thunkable/adeee9cb-4edd-481b-8c98-0ca9642e4e6b/apply
+https://markdalefinancialmanagement.com/careers/junior-full-stack-web-developer/
+https://centennial.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=Y1heRhNbDVB3E3EDQVYhF087dmJfaVUqcFRMIS4NB3krXEtoLUZuAhd0eUMYGhBUQXJjF3U%3D&chk=ZVpaShM%3D&CLID=56827&page=joblisting&lang=1
