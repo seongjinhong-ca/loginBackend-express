@@ -35,3 +35,15 @@ git add webpack/
 git commit -m "learn webpack"
 git push origin # the file committed from frontend/ and docs/ are all pushed into github with separate commit.
 ```
+
+moving file from one location to another:
+
+```sh
+ mv ../../environment-setup/environmentVarible_setUp.md ./
+ # moving environmentalVarible_setUp.md to the current directory (./)
+ # mv [from location] [to location]
+ # mv [source location] [destination location]
+
+ $ ls
+environmentVarible_setUp.md
+```
