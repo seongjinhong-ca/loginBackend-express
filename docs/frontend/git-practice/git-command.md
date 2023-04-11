@@ -59,3 +59,23 @@ making a file:
 ```sh
 touch file1.js # creating a file called file1.js
 ```
+
+remove directory
+
+```sh
+rm -r environment-setup # removing the directory environment-setup
+```
+
+moving location (path)
+
+```sh
+cd .. # outer directory
+cd docs/ # go into docs/ directory if the directory exist in my current path location
+```
+
+seeing the list of files
+
+```sh
+ls # show all the files and folder at the current path location
+ls -la # show all the details of files and folder at the current path location
+```
