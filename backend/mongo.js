@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// mongoose.connect('mongodb://1270.0.1:27017/login-db')
+// mongoose.connect('mongodb://1270.0.1/login-db')
 // .then(() => {console.log("mongodb is connected through mongoose!")})
 // .catch(() => {console.log("failed")})
 
