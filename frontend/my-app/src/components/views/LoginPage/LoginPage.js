@@ -43,7 +43,6 @@ export const LoginPage = () => {
         const {name, value} = e.currentTarget;
         // setPassword(e.currentTarget.value);
         setPassword({...name, [name]:value});
-
     }
 
     const handleChange2 = (e) => {

@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { getInstance } from '../../../utils/api_client';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
+  const navigate = useNavigate();
 
   const init_registeredInfo = {
     username:"",
@@ -49,7 +51,12 @@ function RegisterPage() {
 
     let body = registeredInfo;
     getInstance().post('/api/users/register', body)
-    .then((response)=> {console.log(response)});
+    .then((response)=> {
+      if(response?.status === 200) {
+        navigate(`/login`);
+      }
+    });
+    // .then((response)=> {console.log(response)});
     //helloo, helloo@gmail.com, 123456
   }
 
@@ -73,6 +80,7 @@ const onConfirmCheck = (e) => {
     console.log(isSame)
   }
 }
+
   return (
     <div style={{
       display:'flex', justifyContent:"center", alignItems:"center",
@@ -86,11 +94,11 @@ const onConfirmCheck = (e) => {
         <input name='email' value={registeredInfo.email} onChange={handleChange}/>
         <label>Password</label>
         <input name="password" value={registeredInfo.password} onChange={handleChange}/>
-        <label>Confirm password</label>
+        {/* <label>Confirm password</label>
         <input type="password" name="confirmPassword" value={confirmPassword} onChange={handelConfirmPassword}></input>
         {isSame && (<> password is confirmed to be matched</>)}
         {isSame === false && (<> not matched</>)}
-        {isSame === null && ("")}
+        {isSame === null && ("")} */}
         <button type="submit">submit</button>
       </form>
     </div>
