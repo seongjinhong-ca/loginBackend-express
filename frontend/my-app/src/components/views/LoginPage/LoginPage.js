@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getInstance } from '../../../utils/api_client';
+// import { useHistory } from "react-router-dom";
+// import { redirect } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 export const LoginPage = () => {
+    // const history = useHisotry
+    let navigate = useNavigate();
     const init_email = "";
     const [email, setEmail] = useState(init_email);
     // this.state = {email:""}
@@ -52,7 +57,11 @@ export const LoginPage = () => {
         e.preventDefault();
         let body = form;
         getInstance().post('/api/users/login', body)
-        .then((response)=> console.log(response))
+        .then((response)=>{
+            if(response?.status===200){
+                navigate("/landing");
+            }
+        })
         // hi, hi@gmail.com 1234567
     }
 
