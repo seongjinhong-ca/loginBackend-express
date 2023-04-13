@@ -67,6 +67,60 @@ https://react-ko.vercel.app/learn/state-a-components-memory
 외국판: 완성
 https://react.dev/reference/react/useEffect#my-effect-runs-twice-when-the-component-mounts
 
+####
+
+using handler to fetch data:
+onSubmit form by creating a handler:
+
+- https://www.youtube.com/watch?v=GtK3rvd68to
+
+useEffect vs event handler:
+
+- https://medium.com/@mike.mkrallaproductions/react-side-effects-useeffect-vs-event-handler-objective-comparison-7a77daa5e046
+- https://www.freecodecamp.org/news/how-to-use-axios-with-react/#how-to-make-a-get-request
+- https://medium.com/@nutanbhogendrasharma/step-by-step-consume-rest-api-in-react-application-48388f6c4d9c
+
+bash/shell/
+https://www.youtube.com/playlist?list=PLYQSCk-qyTW0d88jNocdi_YIFMA5Fnpug
+https://www.youtube.com/playlist?list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_
+https://www.youtube.com/watch?v=CaJYuRgRQxg&list=PLTXMX1FE5Hj5ZJDt_WMbioFpdWO5SGy8r&index=2
+
+노마드 코더
+실전형 리액트 hooks:
+https://www.youtube.com/watch?v=Ea-yjv6CFbs
+https://www.youtube.com/watch?v=sZDvByH2mNU&t=334s
+https://codesandbox.io/s/bsbhwt?file=/api.js:0-214&utm_medium=sandpack
+https://react.dev/learn/synchronizing-with-effects
+https://react-ko.vercel.app/reference/react/useEffect#fetching-data-with-effects
+https://velog.io/@zzangzzong/React-%EC%A0%84%EC%97%AD-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC
+
+redux:
+생활코딩:
+https://www.youtube.com/watch?v=yjuwpf7VH74
+
+react native:
+hatemogi:
+https://www.youtube.com/watch?v=UMQ2lxRrK7o&list=PLaHIVvYn0_AvI_qfaPTi1Wm4gioyWP-KZ&index=1
+
+nodejs:
+https://www.youtube.com/watch?v=me7_5XJ3kHY&list=PLWMB5IYAuU6coDdkfJiQwrxECNWAeg83x&index=1
+
+fullstack:
+https://www.youtube.com/watch?v=HWr8bMnkmYY
+https://www.youtube.com/watch?v=iOSKV2rmj-A&list=PLWMB5IYAuU6fWmpFofddsd2E67w_iVxYN&index=3
+https://www.youtube.com/playlist?list=PLgeETUaEEds5HE2uGWezJxYeZwpBonHr-
+https://www.youtube.com/watch?v=iOSKV2rmj-A
+
+deployment:
+github action:
+https://www.youtube.com/watch?v=UNWIXYSZfZY
+
+1. install docker
+2. make my frontend image from docker
+3. make my backend image from docker
+4. find a command that can deploy my images
+   https://www.youtube.com/watch?v=uWQ48da0UOc
+
 job:
 https://www.judge.com/jobs/details/960622/?utm_source=linkedin
 https://career8.successfactors.com/career?company=CADeloitte&loginFlowRequired=true&lang=en_US&_s.crb=VXHLfSnckjtFAEhi8W6XzL4akJMFPfwRye0qW%2bzWkv0%3d
