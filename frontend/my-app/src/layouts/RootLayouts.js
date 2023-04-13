@@ -7,7 +7,7 @@ export default function RootLayouts() {
         <header>
             <nav>
                 <h1> routers navigation</h1>
-                <NavLink to="/">Landing</NavLink>
+                <NavLink to="/landing">Landing</NavLink>
                 <NavLink to="/login">Login</NavLink>
                 <NavLink to="/register">Register</NavLink>
 
