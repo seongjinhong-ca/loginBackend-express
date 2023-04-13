@@ -9,7 +9,7 @@ import RegisterPage from './components/views/RegisterPage/RegisterPage';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayouts/>}>
-      <Route path="/" element={<LandingPage />}/>
+      <Route path="/landing" element={<LandingPage />}/>
       <Route path="/login" element={<LoginPage />}/>
       <Route path="/register" element={<RegisterPage />}/>
     </Route>
