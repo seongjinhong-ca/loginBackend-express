@@ -49,7 +49,7 @@ For developing this application, I will be using React on the frontend, Node.js,
     - docker : to deploy the project.
 ```
 
-## challenges and improvement (will be updated)
+## Challenges and Improvement (will be updated)
 
 1. Able to improve my communication skills by sharing my code logic and listening carefully to other people's suggestion.
 2. Learning React library and mongoose, Node.js, Express, socket.io and others.
