@@ -48,11 +48,18 @@ const cors = require('cors');
 const config = require('./config/key')
 // connecting mongoDb using mongoose
 const mongoose = require('mongoose')
-mongoose.connect(config.mongoURI, {
-}).then(()=> console.log('MongoDB connected...'))
+mongoose.connect(config.mongoURI, {})
+.then(()=> console.log('MongoDB connected...'))
 .catch(err => console.log(err))
 
 app.use(cors())
+
+
+// // connecting monogodb -remake
+// const mongoose = requrie("mongoose")
+// mongoose.connect(config.mongoURI, {})
+// .then(()=> {console.log("connceted ot mongodb.")})
+// .catch(`disconnection to mongodb error`)
 
 // end point
 app.get("/", (req, res) => res.send("Hello world!~안녕하세요."))
@@ -60,6 +67,16 @@ app.get("/", (req, res) => res.send("Hello world!~안녕하세요."))
 app.get('/api/hello', (req, res)=>{
     res.send("안녕하세요")
 })
+
+// //register a user
+// app.post("/api/users/register", async (req, res) => {
+//     const request = req.body;
+//     const user = new User()
+// })
+
+
+
+// register
 app.post("/api/users/register", async (req, res)=> {
     // get the schema of user model
     const user = new User(req.body);
@@ -172,6 +189,7 @@ app.get('/api/users/auth', auth, (req, res)=>{
     })
 })
 
+
 //logout
 app.get('/api/users/logout', auth, (req, res) => {
     User.findOneAndUpdate({_id:req.user._id},
@@ -191,6 +209,9 @@ app.get('/api/users/logout', auth, (req, res) => {
         //     })
         // }
 })
+
+////////////////////////////////////
+
 
 // set the port
 const port = 8000;
