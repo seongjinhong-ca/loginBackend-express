@@ -8,8 +8,11 @@ function RoomModal({children}) {
         <button onClick={() => setShouldShow(true)}>see the Room Modal</button>
         {
             shouldShow && (
-            <div>
+            <div onClick={() => setShouldShow(false)}>
+              <div onClick={e=> e.stopPropagation()}>
+              <button onClick={()=> setShouldShow(false)}> Close Modal </button>
                 {children}
+              </div>
             </div>
             )
         }

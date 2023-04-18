@@ -26,9 +26,26 @@ function LandingPage() {
       })
     }
 
+    const Hello = () => {
+      return (
+        <p>hello</p>
+      )
+    }
+    const [roomName, setRoomName] = useState();
+    const handleRoomNameChange = (e) => {
+      e.preventDefault();
+      const {name, value} = e.currentTarget;
+      setRoomName(value);
+    }
     const showModal = () => {
       return(
-        <RoomModal/>
+        <>
+        <RoomModal>
+          <label>Name of the room: </label>
+          <br/>
+          <input name="RoomName" value={roomName} onChange={handleRoomNameChange}/>
+        </RoomModal>
+        </>
       )
     }
   return (
@@ -42,7 +59,7 @@ function LandingPage() {
           <li>
             list of rooms
           </li>
-          <button onClick={showModal}>Create Room</button>
+          <button onClick={()=> showModal()}>Create Room</button>
           
           <h2>시작 페이지</h2>
           <button onClick={onaHandleClickLogout}>logout</button>

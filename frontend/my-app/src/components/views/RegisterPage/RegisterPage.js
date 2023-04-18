@@ -46,6 +46,7 @@ function RegisterPage() {
   }
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    
     // console.log(registeredInfo)
 
 

@@ -13,7 +13,7 @@ Credit : in progress
 
 ## Description of Application (will be updated)
 
-A user can able to login and log out from the application. Once the user login, the user can create a chat room and able to join the room to have a conversation with multiple other users.
+A user is able to login and log out from the application. Once the user login, the user can create a chat room and be able to join the room to have a conversation with multiple other users.
 
 ## Key Features of in Application (will be updated)
 
@@ -42,8 +42,8 @@ For developing this application, I will be using React on the frontend, Node.js,
 - Backend:
     - Express : for implementing the end points for the server (backend)
     - Mongoose : for manipulating the data coming from end points
-    - MongoDB : for storing a data such as user information
-    - bcrypt and JWT : for the purpose of Auth and security
+    - MongoDB : for storing a data such as a user information
+    - bcrypt and JWT : for the purpose of Authentication and Security
 - others:
     - socket.io : for implementing a communication channel.
     - docker : to deploy the project.
@@ -51,8 +51,8 @@ For developing this application, I will be using React on the frontend, Node.js,
 
 ## Challenges and Improvement (will be updated)
 
-1. Able to improve my communication skills by sharing my code logic and listening carefully to other people's suggestion.
+1. Able to improve my communication skills by sharing my code logic and listening carefully to other people's suggestions.
 2. Learning React library and mongoose, Node.js, Express, socket.io and others.
 3. Decision making for an implementation for each features was a challenge, which requires me to
 4. making an improvement on refactor code by applying design patterns
-5. identifying the better implementation and technique choice by reading and analyzing other people code and communicating with other people.
+5. identifying the better implementation and technique choice by reading and analyzing other people's code and communicating with other people.

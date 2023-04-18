@@ -196,6 +196,13 @@ app.use("/api", require("./routes/userRoutes"));
 app.use('/api', require('./routes/userRoutes'));
 
 ////////////////////////////////////
+/*
+Chat room raw data:
+chat-room id
+list users
+list messages
+*/
+// app.use('/api', require('./routes/chatRoomRoutes'));
 
 
 // set the port
