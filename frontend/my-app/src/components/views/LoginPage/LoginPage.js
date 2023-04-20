@@ -1,31 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getInstance } from '../../../utils/api_client';
-// import { useHistory } from "react-router-dom";
-// import { redirect } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 
 export const LoginPage = () => {
-    // const history = useHisotry
     let navigate = useNavigate();
     const init_email = "";
     const [email, setEmail] = useState(init_email);
-    // this.state = {email:""}
     const [password, setPassword] = useState("");
-    // this.state = {password:""}
 
     const init_form = {
         email:"",
         password:""
     };
     const [form, setForm] = useState(init_form);
-    
-    // get a user data from server at the end-point /api/users/register
-    // useEffect(() => {
-    //     axios.post('/api/users/login')
-    //     .then(response => console.log(response.data))
-    // })
 
     const onEmailHandler = (e) => {
         const {name, value} = e.currentTarget;
@@ -55,7 +44,7 @@ export const LoginPage = () => {
     const onFormSubmit = (e) => {
         e.preventDefault();
         let body = form;
-        getInstance().post('/api/users/login', body)
+        getInstance().post('/api/users/users/login', body)
         .then((response)=>{
             if(response?.status===200){
                 navigate("/landing");

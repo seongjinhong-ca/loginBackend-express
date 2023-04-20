@@ -51,7 +51,7 @@ function RegisterPage() {
 
 
     let body = registeredInfo;
-    getInstance().post('/api/users/register', body)
+    getInstance().post('/api/users/users/register', body)
     .then((response)=> {
       if(response?.status === 200) {
         navigate(`/login`);

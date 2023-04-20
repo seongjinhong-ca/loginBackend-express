@@ -18,7 +18,7 @@ function LandingPage() {
         .then(response => console.log(response.data))
     },[])
     const onaHandleClickLogout = (e) => {
-      getInstance().get(`/api/users/logout`)
+      getInstance().get(`/api/users/users/logout`)
       .then((response) => {
         if(response?.status === 200){
           navigate("/login")
